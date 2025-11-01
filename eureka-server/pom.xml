@@ -6,7 +6,9 @@
 		<groupId>com.TrungTinhBackend</groupId>
 		<artifactId>microservices-platform</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
+
 	<artifactId>eureka-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eureka-server</name>
