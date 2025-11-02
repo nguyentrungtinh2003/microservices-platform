@@ -12,6 +12,24 @@ defaultZone: http://localhost:8761/eureka/
 
 cloud:
 gateway:
+  routers:
+    - id: user-route
+      uri: lb://user-service
+      predicates:
+        - Path=/api/users/**
+    - id: project-route
+      uri: lb://project-service
+      predicates:
+        - Path=/api/projects/**
+    - id: enrollment-route
+      uri: lb://enrollment-service
+      predicates:
+        - Path=/api/enrollments/**
+    - id : notification-route
+      url: lb://notification-service
+      predicates:
+        - Path=/api/notifications/**
+
 discovery:
 locator:
 enabled: true
