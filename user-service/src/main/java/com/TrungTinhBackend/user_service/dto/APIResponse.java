@@ -2,7 +2,7 @@ package com.TrungTinhBackend.user_service.dto;
 
 import java.time.LocalDateTime;
 
-public class ApiResponse {
+public class APIResponse {
 
     private Long statusCode;
     private String message;
@@ -10,10 +10,10 @@ public class ApiResponse {
     private String token;
     private LocalDateTime timestamp;
 
-    public ApiResponse() {
+    public APIResponse() {
     }
 
-    public ApiResponse(Long statusCode, String message, Object data, String token, LocalDateTime timestamp) {
+    public APIResponse(Long statusCode, String message, Object data, String token, LocalDateTime timestamp) {
         this.statusCode = statusCode;
         this.message = message;
         this.data = data;

@@ -1,6 +1,6 @@
-package com.TrungTinhBackend.user_service.service;
+package com.TrungTinhBackend.user_service.service.user;
 
-import com.TrungTinhBackend.user_service.dto.ApiResponse;
+import com.TrungTinhBackend.user_service.dto.APIResponse;
 import com.TrungTinhBackend.user_service.dto.RegisterDto;
 import com.TrungTinhBackend.user_service.entity.User;
 import com.TrungTinhBackend.user_service.repository.UserRepository;
@@ -10,14 +10,14 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
 
     @Override
-    public ApiResponse register(RegisterDto registerDto) {
-        ApiResponse apiResponse = new ApiResponse();
+    public APIResponse register(RegisterDto registerDto) {
+        APIResponse apiResponse = new APIResponse();
 
         User user = new User();
         user.setUsername(registerDto.getUsername());
@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public ApiResponse getAllUser() {
+    public APIResponse getAllUser() {
         return null;
     }
 }
